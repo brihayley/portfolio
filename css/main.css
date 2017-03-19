@@ -111,7 +111,7 @@ h1, h2 {
     font-weight:400;
 }
 
-header {
+.header {
     display:flex;
     justify-content:center;
     flex-flow: column-reverse nowrap;
@@ -129,7 +129,7 @@ header {
 }
 
 @media screen and (min-width: 48em) {
-    header {
+    .header {
         flex-flow:column nowrap;
         -ms-flex-flow:-ms-column || -ms-nowrap;
         -webkit-flex-flow:column || nowrap;
@@ -424,11 +424,11 @@ span.text-content span {
 @media screen and (min-width: 46em){
     .contact ul {
         margin:5% 5%;
-        width:40%;
+        width:39%;
         font-size:1.3em;
     }
     .contact img {
-        width:30%;
+        width:25%;
         margin-top:0%;
     }
 }
@@ -446,11 +446,43 @@ span.text-content span {
     }
     .contact img {
         margin-right: 10%;
-        width:25%;
+        width:20%;
     }
 }
 
+/*=========== Resume ==========*/
 
+.resume {
+    text-align: left;
+    padding:3% 5% 0% 5%;
+    max-width:850px;
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+    color:#434343;
+}
+
+.resume h1 {
+    color:#434343;
+    text-transform: uppercase;
+    margin:0 0 1% 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.resume h1 span {
+    color:#C0504D;
+}
+
+.resume a {
+    color:#C0504D;
+}
+
+.resume h2 {
+    color: #999999;
+    text-align: left;
+    margin:0;
+    font-size:.9em;
+    font-family: 'Roboto', sans-serif;
+}
 
 
 /* ==========================================================================
