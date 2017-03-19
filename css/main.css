@@ -215,15 +215,18 @@ header {
 
 /*
 .favicon {
-    margin:5% auto;
-    width:17%;
-    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    align-content:space-around;
+    margin:15px auto;
+    width:300px;
+    height:300px;
     font-family:'Roboto Slab', serif;
     font-weight:400;
-    font-size: 1.8em;
-    border:2px solid #981818;
-    padding:1%;
-    box-shadow:2px 2px 3px #6e1111 inset, -2px -2px 3px #6e1111 inset;
+    font-size: 180px;
+    border:20px solid #981818;
+    box-shadow:10px 10px #6e1111 inset, -10px -10px #6e1111 inset;
+    padding:10px 3px 0px 3px;
 }
 */
 
