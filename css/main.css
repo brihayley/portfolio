@@ -111,7 +111,7 @@ h1, h2 {
     font-weight:400;
 }
 
-header {
+.header {
     display:flex;
     justify-content:center;
     flex-flow: column-reverse nowrap;
@@ -129,7 +129,7 @@ header {
 }
 
 @media screen and (min-width: 48em) {
-    header {
+    .header {
         flex-flow:column nowrap;
         -ms-flex-flow:-ms-column || -ms-nowrap;
         -webkit-flex-flow:column || nowrap;
@@ -215,15 +215,18 @@ header {
 
 /*
 .favicon {
-    margin:5% auto;
-    width:17%;
-    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    align-content:space-around;
+    margin:15px auto;
+    width:300px;
+    height:300px;
     font-family:'Roboto Slab', serif;
     font-weight:400;
-    font-size: 1.8em;
-    border:2px solid #981818;
-    padding:1%;
-    box-shadow:2px 2px 3px #6e1111 inset, -2px -2px 3px #6e1111 inset;
+    font-size: 180px;
+    border:20px solid #981818;
+    box-shadow:10px 10px #6e1111 inset, -10px -10px #6e1111 inset;
+    padding:10px 3px 0px 3px;
 }
 */
 
@@ -321,10 +324,9 @@ header {
 }
 
 .projects-list li {
-    width: 39%;
+    width: 100%;
     margin:3%;
     border: 2px solid #981818;
-    display:inline-block;
     position:relative;
 }
 
@@ -338,19 +340,15 @@ span.text-content {
   color: white;
   display:table;
   cursor:pointer;
-  height: 100%;
+  height: 40%;
   width: 100%;
   position:absolute;
-  top:0;
-  opacity:0;
+  bottom:0;
+  opacity:1;
   -webkit-transition: opacity 500ms;
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;    
-}
-
-li:hover span.text-content {
-    opacity:1;
 }
 
 span.text-content span {
@@ -365,6 +363,12 @@ span.text-content span {
 @media screen and (min-width:54em) {
     .projects-list li {
         width: 35%;
+    }
+    li:hover span.text-content {
+    opacity:1;
+    }
+    span.text-content {
+        opacity:0;
     }
     span.text-content span{
         font-size:1.3em;
@@ -395,10 +399,10 @@ span.text-content span {
 .contact ul {
     list-style:none;
     float:left;
-    font-weight: bold;
+    font-weight: normal;
     font-size:1.2em;
     margin:5% 0%;
-    width:54%;
+    width:53%;
     padding-left:7%;
 }
 
@@ -421,11 +425,11 @@ span.text-content span {
 @media screen and (min-width: 46em){
     .contact ul {
         margin:5% 5%;
-        width:40%;
+        width:39%;
         font-size:1.3em;
     }
     .contact img {
-        width:30%;
+        width:25%;
         margin-top:0%;
     }
 }
@@ -443,12 +447,199 @@ span.text-content span {
     }
     .contact img {
         margin-right: 10%;
-        width:25%;
+        width:20%;
     }
 }
 
+/*=========== Resume ==========*/
 
+.resume {
+    text-align: left;
+    padding:3% 5% 0% 5%;
+    max-width:850px;
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+    color:#434343;
+}
 
+.resume header h1 {
+    color:#434343;
+    text-transform: uppercase;
+    margin:0 0 1% 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.resume header h1 span {
+    color:#C0504D;
+}
+
+.resume a {
+    color:#C0504D;
+}
+
+.resume h4 {
+    color: #999999;
+    text-align: left;
+    margin:0;
+    font-size:.9em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.resume h2 {
+    color:#C0504D;
+    text-align: left;
+    margin:0 0 5% 0;
+    font-size:1.3em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#right h2 {
+    margin-bottom:9%;
+}
+
+.resume h3 {
+    font-size:1.1em;
+    font-weight: 400;
+    margin:0;
+}
+
+.resume p {
+    font-weight:300;
+    margin-top:0;
+    margin-bottom:15%;
+}
+
+.skills {
+    margin:5% 0 12% 0;
+}
+
+.skills p {
+    margin:0;
+}
+
+#left {
+    float:left;
+    text-align: left;
+    margin:5% 0;
+    padding:0;
+    width:65%;
+}
+
+#right {
+    float:right;
+    text-align: left;
+    margin:5% 0;
+    padding:0;
+    width:30%;
+}
+
+.resume ul {
+    list-style-type:circle;
+    padding-left:4%;
+    font-weight:300;
+}
+
+@media screen and (max-width:40em) {
+    #left {
+        float:none;
+        width:100%;
+    }
+    
+    #right {
+        float:none;
+        width:100%;
+        margin:5% 0 10% 0;
+    }
+    
+    #right h2 {
+        margin-bottom: 5%;
+    }
+    
+    .resume p {
+        margin-bottom:5%;
+    }
+    
+    .skills p {
+        margin:0;
+    }
+    
+    .skills {
+        margin:3% 0 5% 0;
+    }
+}
+
+/* ========= Single Project ======== */
+
+.single-project {
+    margin:5% auto auto auto;
+}
+
+.project-info {
+    text-align:left;
+    padding:0% 3%;
+}
+
+.project-title {
+    background-color: #981818;
+    color:white;
+    text-align: center;
+    padding:1%;
+    font-size:1.2em;
+}
+
+.project-skill {
+    padding:1%;
+    margin-top:1%;
+    -webkit-margin-after: 0em;
+    font-variant: small-caps;
+}
+
+.project-description {
+    padding:1%;
+    -webkit-margin-before: 0em;
+}
+
+.project-photo {
+    margin:3%;
+    border: 2px solid #981818;
+}
+
+.project-photo img {
+    width:100%;
+    height:auto;
+}
+
+@media screen and (min-width:48em) {
+    .single-project {
+        margin-bottom:5%;
+        overflow: auto;
+    }
+    
+    .project-info {
+        float:left;
+        width:35%;
+    }
+    
+    .project-title {
+        font-size:1.4em;
+        width:100%;
+        padding:3%;
+    }
+
+    .project-photo {
+        float:right;
+        width:50%;
+        padding:0;
+        margin:0% 3%;
+    }
+    
+    .project-contact {
+        clear:both;
+    }
+}
 
 /* ==========================================================================
    Helper classes
