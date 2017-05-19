@@ -111,6 +111,14 @@ h1, h2 {
     font-weight:400;
 }
 
+.pdf {
+    text-align: right;
+}
+
+.pdf a:hover {
+    text-decoration: underline;
+}
+
 .header {
     display:flex;
     justify-content:center;
@@ -590,16 +598,25 @@ span.text-content span {
     font-size:1.2em;
 }
 
+.project-title a {
+    color: white;
+}
+
 .project-skill {
     padding:1%;
     margin-top:1%;
+    font-size:1.3em;
     -webkit-margin-after: 0em;
     font-variant: small-caps;
 }
 
 .project-description {
-    padding:1%;
+    padding:0%;
     -webkit-margin-before: 0em;
+}
+
+.project-description a{
+    text-decoration: underline;
 }
 
 .project-photo {
@@ -610,6 +627,10 @@ span.text-content span {
 .project-photo img {
     width:100%;
     height:auto;
+}
+
+.strike {
+    text-decoration: line-through;
 }
 
 @media screen and (min-width:48em) {
@@ -810,3 +831,4 @@ span.text-content span {
         page-break-after: avoid;
     }
 }
+
